@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import axios from 'axios'
 
 function Login() {
   const [id, setId] = useState('admin123');
@@ -10,12 +11,12 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-    if (id == 'admin123' && password == 'adminpass123') {
-      localStorage.setItem('isAdmin', 'true');
+     const res = axios.get(`${PORT}/login`, {id, password});
+    if(res.message === 'correct'){
+      localStorage.setItem('isAdmin','true');
       navigate('/dashboard');
-    } else {
-      alert('Invalid ID or Password');
+    }else{
+      alert("Incorrect Username or Password");
     }
   };
 
