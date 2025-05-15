@@ -8,7 +8,7 @@ function Dashboard() {
   const [filtered, setFiltered] = useState([]);
   const [filterType, setFilterType] = useState('all');
   const navigate = useNavigate();
-  const PORT = "http://localhost:5000"; // added http://localhost
+  const PORT = "https://loan-proj-backend.onrender.com"; // added http://localhost
 
   useEffect(() => {
     axios.get(`${PORT}/api/users`)
