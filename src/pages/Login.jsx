@@ -9,7 +9,7 @@ function Login() {
     const PORT = "https://loan-proj-backend.onrender.com";
 
   const handleLogin = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     if (id == 'admin123' && password == 'adminpass123') {
       localStorage.setItem('isAdmin', 'true');
