@@ -10,7 +10,7 @@ import { setName, setDuration, setInterest, setLoanEnd, setLoanStart,
 
 function Adduser() {
 
-  const PORT = "https://loan-proj-backend.onrender.com";
+  const PORT = "https://loan-project-onup.onrender.com";
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 

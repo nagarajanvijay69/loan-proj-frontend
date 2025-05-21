@@ -8,7 +8,7 @@ function Dashboard() {
   const [filtered, setFiltered] = useState([]);
   const [filterType, setFilterType] = useState('all');
   const navigate = useNavigate();
-  const PORT = "https://loan-proj-backend.onrender.com"; // added http://localhost
+  const PORT = "https://loan-project-onup.onrender.com"; // added http://localhost
 
   useEffect(() => {
      getFunction();

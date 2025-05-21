@@ -4,7 +4,7 @@ import './Edituser.css';
 import axios from 'axios';
 
 function Edituser() {
-  const PORT = "https://loan-proj-backend.onrender.com";
+  const PORT = "https://loan-project-onup.onrender.com";
 
 
   const { id } = useParams();
