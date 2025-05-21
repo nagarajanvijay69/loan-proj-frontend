@@ -11,13 +11,21 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-     const res = axios.get(`${PORT}/login`, {id, password});
-    if(res.message === 'correct'){
-      localStorage.setItem('isAdmin','true');
+    //  const res = axios.get(`${PORT}/login`, {id, password});
+    // if(res.message === 'correct'){
+    //   localStorage.setItem('isAdmin','true');
+    //   navigate('/dashboard');
+    // }else{
+    //   alert("Incorrect Username or Password");
+    // }
+    if(id === 'admin123' && password === 'adminpass123')  {
       navigate('/dashboard');
-    }else{
+     localStorage.setItem('isAdmin','true');
+    }  
+    else{
       alert("Incorrect Username or Password");
     }
+
   };
 
   // useEffect(()=>{
